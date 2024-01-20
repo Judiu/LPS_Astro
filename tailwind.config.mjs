@@ -2,7 +2,11 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',"./node_modules/tw-elements/dist/js/**/*.js"],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'LPSColor' : '#F4041B'
+			}
+		},
 	},
 	plugins: [require("tw-elements/dist/plugin.cjs")],
 	darkMode: "class"
