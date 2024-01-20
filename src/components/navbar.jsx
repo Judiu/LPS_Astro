@@ -1,12 +1,12 @@
 export const Barra = () => {
     return (
         <nav
-            class="sticky top-0 z-10 block w-full max-h-20 max-w-full px-4 py-2 text-white bg-black border rounded-none shadow-md h-max border-white/0 bg-opacity-60 backdrop-blur-xl backdrop-saturate-200 lg:px-8 lg:py-1">
-            <div class="flex items-center justify-around text-blue-gray-900">
-                <a href="#"
+            class="sticky top-0 z-10 block w-full max-h-20 max-w-full px-4 py-2 text-white bg-black border rounded-none shadow-md h-max border-white/0 bg-opacity-60 backdrop-blur-xl backdrop-saturate-200 lg:px-8 lg:py-1 text-pretty">
+            <div class="flex items-center justify-around text-blue-gray-900">             
+                <a href="#"                
                     class="mr-4 block cursor-pointer py-1.5 font-sans text-2xl font-medium leading-relaxed text-inherit antialiased">
-                    LPS Ingenieria Estructural
-                </a>
+                    LPS Ingenieria Estructural                    
+                </a>                
                 <div class="flex items-center gap-4 px-0 py-6">
                     <div class="hidden mr-4 lg:block ">
                         <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">

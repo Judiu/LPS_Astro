@@ -1,7 +1,7 @@
 export const Portada = () =>{
     return(
         
-<div className="w-full relative">
+<div className="w-full relative bg-white">
     <img
         className="absolute top-10 w-[1000px] left-0 right-0 m-auto"
         alt="Logo LPS Ingenieria Estructural"
@@ -14,7 +14,7 @@ export const Portada = () =>{
         loop 
         muted
     ></video>
-    <video className="absolute -bottom-48 blur-3xl -z-40" src="/video.mp4" autoPlay loop muted></video>
+    
 </div>
     )
 }

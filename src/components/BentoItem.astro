@@ -1,0 +1,18 @@
+const {title, subtitle} = Astro.props
+
+export const BentoItem = () => {
+    return(
+        <article
+            class={'
+                ${Astro.props.class}
+                relative rounded-xl
+                backdrop-blur-md
+                border border-black/10
+                shadow-inner shadow-white/10
+            '}
+        >
+            <h2>{title}</h2>
+            <h3>{subtitle}</h3>
+        </article>
+    )
+}
