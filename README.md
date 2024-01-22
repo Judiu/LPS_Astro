@@ -11,7 +11,10 @@
 │   └── favicon.svg
 ├── src/
 │   ├── components/
+│   │   └── Bento.astro
+│   │   └── BentoItem.astro
 │   │   └── Card.astro
+│   │   └── LogoLPS.astro
 │   │   └── meet_team.jsx
 │   │   └── navbar.jsx
 │   │   └── Portada.jsx
