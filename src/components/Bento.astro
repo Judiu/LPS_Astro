@@ -1,14 +1,19 @@
 ---
-import BentoItem from "../components/BentoItem.astro";
+import BentoItem from "./BentoItem.astro";
 ---
+<style>
+    section{
+        background-image: url("./PlanoCAD.jpeg");
+        background-position: ;
+        background-size: cover;
+    }
+</style>
 
-        <section
-            class={'w-full max-w-[1400px] grid grid-cols-10 auto-rows-[35rem] gap-4 mx-auto p-20'}
-        >
-            <BentoItem title="Ferroscan"/>
-            <BentoItem title="Licencias"/>
-            <BentoItem title="Patologias"/>
-            <BentoItem title="Arquitectura"/>
-        </section>
-   
-
+<section
+    class={'w-screen grid grid-cols-10 auto-rows-[35rem] gap-4 mx-auto p-20'}
+>
+    <BentoItem class="col-span-10 md:col-span-4" title="Ferroscan" subtitle="Lorem"/>
+    <BentoItem class="col-span-10 md:col-span-6" title="Licencias" subtitle="Lorem"/>
+    <BentoItem class="col-span-10 md:col-span-4" title="Patologias" subtitle="Lorem"/>
+    <BentoItem class="col-span-10 md:col-span-6" title="Arquitectura" subtitle="Lorem"/>
+</section>

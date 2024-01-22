@@ -1,4 +1,19 @@
-<div>
-    <h1>Hola Mundo</h1>
-</div>
-    
+---
+interface Props {
+    class?: string
+    title: string
+    subtitle?: string
+}
+
+const {title, subtitle} = Astro.props
+---
+
+<article 
+    class={'${Astro.props.class} col-span-5 relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 overflow-hidden group text-white'}
+>
+    <slot name="image"></slot>
+    <h2>{title}</h2>
+    {subtitle && <h3>{subtitle}</h3>}
+
+    <slot name="content"></slot>
+</article>
