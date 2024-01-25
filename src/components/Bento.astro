@@ -1,5 +1,9 @@
 ---
 import BentoItem from "./BentoItem.astro";
+
+import { getI18N } from "../i18n/"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 <style>
@@ -20,8 +24,8 @@ import BentoItem from "./BentoItem.astro";
         <!-- Item 1 -->
         <BentoItem
             class="col-span-10 md:col-span-6"
-            title="Ferroscan"
-            subtitle="Detección, visualización y medición de barras de refuerzo de acero en hormigón."
+            title={i18n?.BENTO_1_TITLE}
+            subtitle={i18n?.BENTO_1_SUBTITLE}
         >
             <div
                 slot="image"
@@ -29,19 +33,15 @@ import BentoItem from "./BentoItem.astro";
                 style="background-image: url('./Ferroscan.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white">
-                <strong>LPS Ingenieria </strong>cuenta con el Ferroscan PS300 el cual es un instrumento de <strong
-                    >inspección no destructiva</strong
-                > que se utiliza para detectar, visualizar y medir la
-                profundidad y el diámetro de las barras de refuerzo de acero en
-                el hormigón. 
+            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_1_ARTICLE}>
+                 
             </p>
         </BentoItem>
         <!-- Item 2 -->
         <BentoItem
             class="col-span-10 md:col-span-4"
-            title="Patología Estructural"
-            subtitle="Identificación y evaluación de las patologías estructurales."
+            title={i18n?.BENTO_2_TITLE}
+            subtitle={i18n?.BENTO_2_SUBTITLE}
         >
             <div
                 slot="image"
@@ -49,15 +49,14 @@ import BentoItem from "./BentoItem.astro";
                 style="background-image: url('./Patologia.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white">
-                <strong>En LPS Ingenieria</strong> hemos trabajado en el area de patologías estructurals encargandonos del <strong>diagnóstico de las estructuras</strong>. Nuestro objetivo es identificar y evaluar las patologías estructurales para <strong>determinar su estado de conservación y su potencial riesgo</strong>.
+            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_2_ARTICLE}>
             </p>
         </BentoItem>
         <!-- Item 3 -->
         <BentoItem
             class="col-span-10 md:col-span-4"
-            title="Estudio de Suelos"
-            subtitle="LPS Ingeniería: Su aliado para la construcción segura."
+            title={i18n?.BENTO_3_TITLE}
+            subtitle={i18n?.BENTO_3_SUBTITLE}
         >
             <div
                 slot="image"
@@ -65,15 +64,14 @@ import BentoItem from "./BentoItem.astro";
                 style="background-image: url('./Estudiosdesuelos.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white">
-                Los estudios de suelos son una <strong>parte esencial</strong> de cualquier proyecto de construcción. Son la base para garantizar la <strong>seguridad y la estabilidad</strong> de la estructura.
+            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_3_ARTICLE}>
             </p>
         </BentoItem>
         <!-- Item 4 -->
         <BentoItem
             class="col-span-10 md:col-span-6"
-            title="Licencias de construcción"
-            subtitle="LPS Ingeniería: Su aliado para obtener la licencia de construcción que necesita."
+            title={i18n?.BENTO_4_TITLE}
+            subtitle={i18n?.BENTO_4_SUBTITLE}
         >
             <div
                 slot="image"
@@ -81,15 +79,14 @@ import BentoItem from "./BentoItem.astro";
                 style="background-image: url('./Licencias.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white">
-                Las licencias de construcción son un <strong>requisito legal</strong> para cualquier proyecto de construcción. Son otorgadas por las autoridades locales y garantizan que el proyecto cumpla con los <strong>códigos de construcción y otros requisitos</strong> reglamentarios.
+            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_4_ARTICLE}>
             </p>
         </BentoItem>
         <!-- Item 5 -->
         <BentoItem
             class="col-span-10 md:col-span-6"
-            title="Diseños Estructurales"
-            subtitle="La base de la seguridad y la estabilidad de las estructuras"
+            title={i18n?.BENTO_5_TITLE}
+            subtitle={i18n?.BENTO_5_SUBTITLE}
         >
             <div
                 slot="image"
@@ -97,15 +94,14 @@ import BentoItem from "./BentoItem.astro";
                 style="background-image: url('./CalculoEST.webp')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white">
-                En <strong>LPS Ingeniería</strong> contamos con un equipo de profesionales experimentados en el cálculo estructural. Utilizamos las últimas técnicas y tecnologías para proporcionarle la <strong>información que necesita</strong> para tomar las mejores decisiones para su proyecto.
+            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_5_ARTICLE}>
             </p>
         </BentoItem>
         <!-- Item 6 -->
         <BentoItem
             class="col-span-10 md:col-span-4"
-            title="Planos arquitectónicos y renders"
-            subtitle="La clave para comunicar su visión"
+            title={i18n?.BENTO_6_TITLE}
+            subtitle={i18n?.BENTO_6_SUBTITLE}
         >
             <div
                 slot="image"
@@ -113,8 +109,7 @@ import BentoItem from "./BentoItem.astro";
                 style="background-image: url('./Render.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white">
-                Los planos arquitectónicos y renders son <strong>herramientas esenciales</strong> para cualquier proyecto de construcción. Los planos arquitectónicos proporcionan una <strong>representación precisa de la estructura</strong>, mientras que los renders brindan una visualización realista de cómo se verá el proyecto terminado.
+            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_6_ARTICLE}>
             </p>
         </BentoItem>
     </section>

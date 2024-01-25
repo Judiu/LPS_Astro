@@ -5,6 +5,10 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+import { getI18N } from "../i18n/"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 <!doctype html>
@@ -14,7 +18,8 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>LPS Ingenieria Estructural</title>
+		<title>{i18n?.SEO_TITLE}</title>
+		<meta name="description" content={i18n?.SEO_DESCRIPTION}>
 		<script
 			type="text/javascript"
 			src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"

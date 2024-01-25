@@ -1,18 +1,20 @@
-<div class="flex items-center justify-center min-h-screen backdrop-blur-lg">
+---
+import { getI18N } from "../i18n/"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<div class="flex items-center justify-center min-h-screen backdrop-blur-lg p-20">
     <div class="flex flex-col">
         <div class="flex flex-col">
             <div class="container max-w-7xl px-4">
                 <div class="flex flex-wrap justify-center text-center mb-24">
                     <div class="w-full lg:w-6/12 px-4">
                         <h1 class="text-black text-4xl font-bold mb-8">
-                            Equipo LPS Ingenieria
+                            {i18n?.INTRO_TEAM}
                         </h1>
                         <p class="text-black text-lg font-light">
-                            Somos una empresa ubicada en la ciudad de mosquera
-                            que presta sus servicios de Ingenieria Civil,
-                            arquitectura, patologias y reconocimientos
-                            estructurales, ensayos no destructivos, licencias de
-                            construccion, ferroscan, ensayos destructivos.
+                            {i18n?.INTRO_TEAM_DESCRIPTION}
                         </p>
                     </div>
                 </div>
@@ -31,10 +33,10 @@
                             </a>
                             <div class="text-center mt-6">
                                 <h1 class="text-xl font-bold mb-1">
-                                    Tranter Jaskulski
+                                    Harold Lopez
                                 </h1>
                                 <div class="font-light mb-2">
-                                    Founder & Specialist
+                                    {i18n?.JOB_1}
                                 </div>
                                 <div
                                     class="flex items-center justify-center hover:opacity-100
@@ -80,10 +82,10 @@
                             </a>
                             <div class="text-center mt-6">
                                 <h1 class="text-xl font-bold mb-1">
-                                    Denice Jagna
+                                    Estefania Lopez
                                 </h1>
                                 <div class="font-light mb-2">
-                                    Tired & M. Specialist
+                                    {i18n?.JOB_2}
                                 </div>
                                 <div
                                     class="flex items-center justify-center opacity-50 hover:opacity-100
@@ -129,9 +131,9 @@
                             </a>
                             <div class="text-center mt-6">
                                 <h1 class="text-xl font-bold mb-1">
-                                    Kenji Milton
+                                    Kevin Piraquive
                                 </h1>
-                                <div class="font-light mb-2">Team Memeber</div>
+                                <div class="font-light mb-2">{i18n?.JOB_3}</div>
                                 <div
                                     class="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300"
@@ -176,9 +178,9 @@
                             </a>
                             <div class="text-center mt-6">
                                 <h1 class="text-xl font-bold mb-1">
-                                    Doesn't matter
+                                    Fredy Piraquive
                                 </h1>
-                                <div class="font-light mb-2">Will be fired</div>
+                                <div class="font-light mb-2">{i18n?.JOB_4}</div>
                                 <div
                                     class="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300"
