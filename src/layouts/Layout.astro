@@ -12,7 +12,7 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -60,5 +60,19 @@ const i18n = getI18N({ currentLocale })
 	body {
 		background-image: url(https://images.unsplash.com/photo-1581093806997-124204d9fa9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 		background-attachment: fixed;
+	}
+	#header-nav{
+		animation:blur linear both;
+		animation-timeline: scroll();
+		animation-range: 0 500px;
+	}
+	@keyframes blur {
+		to{
+			box-shadow: 
+				0px 5px 50px -5px hsla(0, 0%, 100%, 0.1),
+				0px 0px 0px 1px hsla(0, 0%, 100%, 0.3);
+				background: black;
+				backdrop-filter:blur(10px);
+		}
 	}
 </style>
