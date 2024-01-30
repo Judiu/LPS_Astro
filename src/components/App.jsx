@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import './styles.css';
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function App() {
   const progressCircle = useRef(null);
@@ -23,6 +23,7 @@ export default function App() {
     <>
       <Swiper
         slidesPerView={1}
+        effect={'fade'}
         spaceBetween={30}
         loop={true}
         autoplay={{
@@ -34,7 +35,7 @@ export default function App() {
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[EffectFade, Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="h-screen rounded-2xl"
       >
