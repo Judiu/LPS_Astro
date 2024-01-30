@@ -36,7 +36,10 @@ export default function App() {
         className="h-screen rounded-2xl"
       >
         <SwiperSlide className=' justify-center items-center '>
-          <img src="/Patologia.jpg" className='absolute object-cover blur-sm' alt="" />
+          <img src="/FerroscanPasante.jpg" className='absolute object-cover blur-sm' alt="" />          
+          <bottom class="bg-black text-white absolute">
+              hola  soy el bottom
+          </bottom>
           <div class="animated-title">
             <div class="text-top uppercase text-black font-bold">
               <div>
