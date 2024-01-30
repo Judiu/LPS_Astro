@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import './styles.css';
 
 // import required modules
@@ -22,37 +21,61 @@ export default function App() {
   return (
     <>
       <Swiper
-        slidesPerView={1}
-        effect={'fade'}
         spaceBetween={30}
         loop={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 6500,
+          disableOnInteraction: true,
         }}
         pagination={{
           type: 'progressbar',
-          clickable: true,
         }}
         navigation={true}
         modules={[EffectFade, Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="h-screen rounded-2xl"
       >
-        <SwiperSlide className=' justify-center items-center'>
-          <img src="/Patologia.jpg" className='absolute object-cover' alt="" />
-          <a href="" className='text-2xl sm:text-4xl py-6 text-LPSColor z-10 font-bold'>Slide 1</a>
-          <div className='absolute block text-LPSColor'>
-            <h5 className=' translate-y-10'>Hola Mundo</h5>
+        <SwiperSlide className=' justify-center items-center '>
+          <img src="/Patologia.jpg" className='absolute object-cover blur-sm' alt="" />
+          <div class="animated-title">
+            <div class="text-top uppercase text-black font-bold">
+              <div>
+                <a href="">Ferroscan</a>
+                <span>Para Pasantes</span>
+              </div>
+            </div>
+            <div class="text-bottom text-LPSColor font-bold">
+              <div>Con el Ferroscan PS-300 podra realizar demarcacion de los aceros de refuerzo in-situ para posteriores pasantes, con la finalidad de no afectar los aceros de refuerzo del elemento a perforar.</div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/Render.jpg" className='absolute object-cover' alt="" />
-          <a href="" className='text-6xl text-LPSColor z-10 font-bold'>Slide 2</a>
+          <img src="/Render.jpg" className='absolute object-cover blur-sm' alt="" />
+          <div class="animated-title">
+            <div class="text-top uppercase ">
+              <div>
+                <span>Ferroscan</span>
+                <span>Para Pasantes</span>
+              </div>
+            </div>
+            <div class="text-bottom">
+              <div>Detección precisa: El sistema sirve para detectar de manera sonora, visualizar, determinar la profundidad y estimar el diámetro de metales ferrosos, tales como varillas de refuerzo, y no ferrosos dentro de una armadura de concreto</div>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/Ferroscan2.webp" className='absolute object-cover' alt="" />
-          <a href="" className='text-6xl text-LPSColor z-10 font-bold'>Slide 3</a>
+          <img src="/Ferroscan2.webp" className='absolute object-cover blur-sm' alt="" />
+          <div class="animated-title">
+            <div class="text-top">
+              <div>
+                <span>mimicking</span>
+                <span>apple's design</span>
+              </div>
+            </div>
+            <div class="text-bottom">
+              <div>for the win!</div>
+            </div>
+          </div>
         </SwiperSlide>
         <div className="autoplay-progress z-10" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
