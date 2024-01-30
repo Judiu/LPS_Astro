@@ -2,8 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Barra from "../components/navbar.astro";
 import Footer from "../components/Footer.astro";
+import FerroscanIntro from "../components/Ferroscan_Intro.astro";
 
 import { getI18N } from "../i18n/";
+import Gallery from "../components/Gallery.astro";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
@@ -13,57 +15,7 @@ const i18n = getI18N({ currentLocale });
     description="Servicios de ingenieria, sabana occidental, Bogota, Colombia."
 >
     <Barra />
-    <div
-        class="grid min-h-[100px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible backdrop-blur-2xl"
-    >
-        <figure class="relative w-full">
-            <div
-                class="grid absolute w-full h-full rounded-lg justify-center items-center text-9xl uppercase"
-            >
-                <p
-                    class="hover:bg-gradient-to-r hover:from-LPSColor hover:to-blue-800 hover:text-transparent hover:bg-clip-text hover:drop-shadow-sm texto-animado"
-                >
-                    Ferroscan
-                </p>
-            </div>
-            <img
-                class="object-cover w-full h-full rounded-xl shadow-lg shadow-blue-gray-900/50 bg-no-repeat bg-bottom max-h-[600px]"
-                src="/Ferroscan2.webp"
-                alt="Ferroscan women"
-            />
-            <style>
-                @keyframes typing {
-                    from {
-                        width: 0;
-                    }
-                    to {
-                        width: 100%;
-                    }
-                }
-
-                .texto-animado {
-                    width: 0;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    animation: typing 3s steps(200, end) forwards;
-                    font-family: 'Courier New', Courier, monospace;
-                }
-            </style>
-
-            <figcaption
-                class="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 -translate-y-0 justify-between rounded-xl border border-white bg-white/75 py-10 px-10 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm"
-            >
-                <div>
-                    <p class="block font-sans text-center">
-                        El objetivo principal del Ferroscan es identificar la
-                        ubicación y el estado de las varillas de refuerzo en
-                        concreto. Esta información es importante para garantizar
-                        la seguridad y la integridad de las estructuras de
-                        concreto.
-                    </p>
-                </div>
-            </figcaption>
-        </figure>
-    </div>
+    <FerroscanIntro />
+    <Gallery />
     <Footer />
 </Layout>
