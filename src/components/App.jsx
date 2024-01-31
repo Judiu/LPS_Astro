@@ -38,8 +38,10 @@ export default function App() {
         modules={[Parallax, Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="h-screen rounded-2xl "
-      >
-        <SwiperSlide>
+        
+      > 
+        {/* Swiper 1 */}
+        <SwiperSlide>          
           <div className="grid grid-cols-2">
             <div>
               <div>
@@ -69,31 +71,72 @@ export default function App() {
             </div>
           </div>
         </SwiperSlide>
+        {/* Swiper 2 */}
         <SwiperSlide>
-          <div
-            slot="container-start"
-            className="parallax-bg -z-10 object-cover"
-            style={{
-              'background-image': 'url("./PlanoCAD.jpg")',
-            }}
-            data-swiper-parallax="-23%"
-          ></div>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 2
+          <div className="grid grid-cols-2">
+            <div>
+              <div>
+                <div className="title text-2xl sm:text-8xl font-bold text-LPSColor uppercase" data-swiper-parallax="-300">
+                  {i18n?.BENTO_1_TITLE}
+                </div>
+                <div className="subtitle text-xl sm:text-4xl text-LPSColor" data-swiper-parallax="-200">
+                  Para Patologias Estructurales
+                </div>
+                <div className="text text-sm sm:text-xl text-LPSColor " data-swiper-parallax="-100">
+                  <p slot="content" className="">
+                  Ferroscan es una herramienta no destructiva que permite evaluar de manera cuantitativa la “Salud Estructural” de los diferentes elementos de una estructura
+                  </p>
+                </div>
+              </div>
+              <div
+                slot="container-start"
+                className="parallax-bg -z-10 blur-lg"
+                style={{
+                  'background-image': 'url(./Hilti_Ferroscan.png)',
+                }}
+                data-swiper-parallax="-23%"
+              ></div>
+            </div>
+            <div>
+              <img src="./Hilti_Ferroscan.png" alt="" class="image-text-lado"/>
+              <script>
+                
+              </script>
+            </div>
           </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
+        </SwiperSlide>
+        {/* Swiper 3 */}
+        <SwiperSlide>
+          <div className="grid grid-cols-2">
+            <div>
+              <div>
+                <div className="title text-2xl sm:text-8xl font-bold text-LPSColor uppercase" data-swiper-parallax="-300">
+                  {i18n?.BENTO_1_TITLE}
+                </div>
+                <div className="subtitle text-xl sm:text-4xl text-LPSColor" data-swiper-parallax="-200">
+                  Para Informes de Curaduria
+                </div>
+                <div className="text text-sm sm:text-xl text-LPSColor " data-swiper-parallax="-100">
+                  <p slot="content" className="">
+                  
+                  </p>
+                </div>
+              </div>
+              <div
+                slot="container-start"
+                className="parallax-bg -z-10 blur-lg"
+                style={{
+                  'background-image': 'url(./Hilti_Ferroscan_Informe.png)',
+                }}
+                data-swiper-parallax="-23%"
+              ></div>
+            </div>
+            <div>
+              <img src="./Hilti_Ferroscan_Informe.png" alt="" class="image-text-lado"/>
+              <script>
+                
+              </script>
+            </div>
           </div>
         </SwiperSlide>
         <div className="autoplay-progress z-10" slot="container-end">
@@ -103,6 +146,8 @@ export default function App() {
           <span ref={progressContent}></span>
         </div>
       </Swiper >
+      
     </>
   );
 }
+
