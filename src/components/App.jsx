@@ -37,28 +37,36 @@ export default function App() {
         navigation={true}
         modules={[Parallax, Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="h-screen rounded-2xl"
+        className="h-screen rounded-2xl "
       >
-
         <SwiperSlide>
-          <div
-            slot="container-start"
-            className="parallax-bg -z-10"
-            style={{
-              'background-image': 'url(./FerroscanPasante.jpg)',
-            }}
-            data-swiper-parallax="-23%"
-          ></div>
-          <div className="title text-2xl sm:text-8xl text-LPSColor " data-swiper-parallax="-300">
-              {i18n?.BENTO_1_TITLE}
-          </div>
-          <div className="subtitle text-xl sm:text-4xl text-LPSColor" data-swiper-parallax="-200">
-              Para Pasantes
-          </div>
-          <div className="text text-sm sm:text-xl text-LPSColor " data-swiper-parallax="-100">
-          <p slot="content" className="">
-            El marcaje de los aceros de refuerzo antes de hacer una pasante, permite al momento de realizar el procediemiento no dañar los aceros.
-          </p>
+          <div className="grid grid-cols-2">
+            <div>
+              <div>
+                <div className="title text-2xl sm:text-8xl font-bold text-LPSColor uppercase" data-swiper-parallax="-300">
+                  {i18n?.BENTO_1_TITLE}
+                </div>
+                <div className="subtitle text-xl sm:text-4xl text-LPSColor" data-swiper-parallax="-200">
+                  Para Pasantes Estructurales
+                </div>
+                <div className="text text-sm sm:text-xl text-LPSColor " data-swiper-parallax="-100">
+                  <p slot="content" className="">
+                    El marcaje de los aceros de refuerzo antes de hacer una pasante, permite al momento de realizar el procediemiento no dañar los aceros.
+                  </p>
+                </div>
+              </div>
+              <div
+                slot="container-start"
+                className="parallax-bg -z-10 blur-lg"
+                style={{
+                  'background-image': 'url(./FerroscanPasante.jpg)',
+                }}
+                data-swiper-parallax="-23%"
+              ></div>
+            </div>
+            <div>
+              <img src="./FerroscanPasante.jpg" alt="" class="image-text-lado"/>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -94,7 +102,7 @@ export default function App() {
           </svg>
           <span ref={progressContent}></span>
         </div>
-      </Swiper>
+      </Swiper >
     </>
   );
 }
