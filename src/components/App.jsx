@@ -9,7 +9,11 @@ import 'swiper/css/navigation';
 import './styles.css';
 
 // import required modules
-import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Parallax, Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+import { getI18N } from "../i18n/"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 
 export default function App() {
   const progressCircle = useRef(null);
@@ -31,53 +35,57 @@ export default function App() {
           type: 'progressbar',
         }}
         navigation={true}
-        modules={[EffectFade, Autoplay, Pagination, Navigation]}
+        modules={[Parallax, Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="h-screen rounded-2xl"
       >
-        <SwiperSlide className=' justify-center items-center '>
-          <img src="/FerroscanPasante.jpg" className='absolute object-cover blur-sm' alt="" />          
-          <bottom class="bg-black text-white absolute">
-              hola  soy el bottom
-          </bottom>
-          <div class="animated-title">
-            <div class="text-top uppercase text-black font-bold">
-              <div>
-                <a href="">Ferroscan</a>
-                <span>Para Pasantes</span>
-              </div>
-            </div>
-            <div class="text-bottom text-LPSColor font-bold">
-              <div>Con el Ferroscan PS-300 podra realizar demarcacion de los aceros de refuerzo in-situ para posteriores pasantes, con la finalidad de no afectar los aceros de refuerzo del elemento a perforar.</div>
-            </div>
+
+        <SwiperSlide>
+          <div
+            slot="container-start"
+            className="parallax-bg -z-10"
+            style={{
+              'background-image': 'url(./FerroscanPasante.jpg)',
+            }}
+            data-swiper-parallax="-23%"
+          ></div>
+          <div className="title text-2xl sm:text-8xl text-LPSColor " data-swiper-parallax="-300">
+              {i18n?.BENTO_1_TITLE}
+          </div>
+          <div className="subtitle text-xl sm:text-4xl text-LPSColor" data-swiper-parallax="-200">
+              Para Pasantes
+          </div>
+          <div className="text text-sm sm:text-xl text-LPSColor " data-swiper-parallax="-100">
+          <p slot="content" className="">
+            El marcaje de los aceros de refuerzo antes de hacer una pasante, permite al momento de realizar el procediemiento no dañar los aceros.
+          </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/Render.jpg" className='absolute object-cover blur-sm' alt="" />
-          <div class="animated-title">
-            <div class="text-top uppercase ">
-              <div>
-                <span>Ferroscan</span>
-                <span>Para Pasantes</span>
-              </div>
-            </div>
-            <div class="text-bottom">
-              <div>Detección precisa: El sistema sirve para detectar de manera sonora, visualizar, determinar la profundidad y estimar el diámetro de metales ferrosos, tales como varillas de refuerzo, y no ferrosos dentro de una armadura de concreto</div>
-            </div>
+          <div
+            slot="container-start"
+            className="parallax-bg -z-10 object-cover"
+            style={{
+              'background-image': 'url("./PlanoCAD.jpg")',
+            }}
+            data-swiper-parallax="-23%"
+          ></div>
+          <div className="title" data-swiper-parallax="-300">
+            Slide 2
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/Ferroscan2.webp" className='absolute object-cover blur-sm' alt="" />
-          <div class="animated-title">
-            <div class="text-top">
-              <div>
-                <span>mimicking</span>
-                <span>apple's design</span>
-              </div>
-            </div>
-            <div class="text-bottom">
-              <div>for the win!</div>
-            </div>
+          <div className="subtitle" data-swiper-parallax="-200">
+            Subtitle
+          </div>
+          <div className="text" data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
           </div>
         </SwiperSlide>
         <div className="autoplay-progress z-10" slot="container-end">
