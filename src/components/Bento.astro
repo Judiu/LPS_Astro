@@ -1,9 +1,10 @@
 ---
 import BentoItem from "./BentoItem.astro";
+import Link from "react-dom";
 
-import { getI18N } from "../i18n/"
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+import { getI18N } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <style>
@@ -22,22 +23,25 @@ const i18n = getI18N({ currentLocale })
       `}
     >
         <!-- Item 1 -->
-        <BentoItem
-            class="col-span-10 md:col-span-6"
-            title={i18n?.BENTO_1_TITLE}
-            subtitle={i18n?.BENTO_1_SUBTITLE}
-        >
-            <div
-                
-                slot="image"
-                class="absolute left-0 top-0 bottom-0 w-full h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat z-0"
-                style="background-image: url('./Ferroscan.jpg');"
+        <a href="./ferroscan" class="col-span-10 md:col-span-6">
+            <BentoItem
+                class="h-full"    
+                title={i18n?.BENTO_1_TITLE}
+                subtitle={i18n?.BENTO_1_SUBTITLE}
             >
-            </div>
-            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_1_ARTICLE}>
-                 
-            </p>
-        </BentoItem>
+                <div
+                    slot="image"
+                    class="absolute left-0 top-0 bottom-0 w-full h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat z-0"
+                    style="background-image: url('./Ferroscan.jpg');"
+                >
+                </div>
+                <p
+                    slot="content"
+                    class="max-w-xl text-white"
+                    set:html={i18n?.BENTO_1_ARTICLE}
+                />
+            </BentoItem>
+        </a>
         <!-- Item 2 -->
         <BentoItem
             class="col-span-10 md:col-span-4"
@@ -50,8 +54,11 @@ const i18n = getI18N({ currentLocale })
                 style="background-image: url('./Patologia.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_2_ARTICLE}>
-            </p>
+            <p
+                slot="content"
+                class="max-w-xl text-white"
+                set:html={i18n?.BENTO_2_ARTICLE}
+            />
         </BentoItem>
         <!-- Item 3 -->
         <BentoItem
@@ -65,8 +72,11 @@ const i18n = getI18N({ currentLocale })
                 style="background-image: url('./Estudiosdesuelos.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_3_ARTICLE}>
-            </p>
+            <p
+                slot="content"
+                class="max-w-xl text-white"
+                set:html={i18n?.BENTO_3_ARTICLE}
+            />
         </BentoItem>
         <!-- Item 4 -->
         <BentoItem
@@ -80,8 +90,11 @@ const i18n = getI18N({ currentLocale })
                 style="background-image: url('./Licencias.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_4_ARTICLE}>
-            </p>
+            <p
+                slot="content"
+                class="max-w-xl text-white"
+                set:html={i18n?.BENTO_4_ARTICLE}
+            />
         </BentoItem>
         <!-- Item 5 -->
         <BentoItem
@@ -95,8 +108,11 @@ const i18n = getI18N({ currentLocale })
                 style="background-image: url('./CalculoEST.webp')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_5_ARTICLE}>
-            </p>
+            <p
+                slot="content"
+                class="max-w-xl text-white"
+                set:html={i18n?.BENTO_5_ARTICLE}
+            />
         </BentoItem>
         <!-- Item 6 -->
         <BentoItem
@@ -110,8 +126,11 @@ const i18n = getI18N({ currentLocale })
                 style="background-image: url('./Render.jpg')"
             >
             </div>
-            <p slot="content" class="max-w-xl text-white" set:html={i18n?.BENTO_6_ARTICLE}>
-            </p>
+            <p
+                slot="content"
+                class="max-w-xl text-white"
+                set:html={i18n?.BENTO_6_ARTICLE}
+            />
         </BentoItem>
     </section>
 </div>

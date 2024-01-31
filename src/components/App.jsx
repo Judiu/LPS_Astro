@@ -114,7 +114,7 @@ export default function App() {
                   {i18n?.BENTO_1_TITLE}
                 </div>
                 <div className="subtitle text-xl sm:text-4xl text-LPSColor" data-swiper-parallax="-200">
-                  Para Informes de Curaduria
+                  Para Informes de Estructurales
                 </div>
                 <div className="text text-sm sm:text-xl text-LPSColor " data-swiper-parallax="-100">
                   <p slot="content" className="">
