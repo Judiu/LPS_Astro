@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Barra from "../components/navbar.astro";
+import Footer from "../components/Footer.astro";
+import Calculo from "../components/Calculo.astro";
+
+import { getI18N } from "../i18n/";
+import Gallery from "../components/Gallery.astro";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<Layout
+    title="LPS Ingenieria"
+    description="Servicios de ingenieria, sabana occidental, Bogota, Colombia."
+>
+    <Barra />
+    <Calculo />
+    <Gallery />
+    <Footer />
+</Layout>
