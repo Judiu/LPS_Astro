@@ -11,11 +11,11 @@ import './styles.css';
 // import required modules
 import { Parallax, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-import { getI18N } from "../i18n/"
+import { getI18N } from "../i18n"
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 
-export default function App() {
+export default function Ferroscan() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
