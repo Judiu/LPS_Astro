@@ -1,0 +1,33 @@
+---
+import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Parallax, Autoplay, Pagination, Navigation } from 'swiper/modules';
+// import Swiper core and required modules
+
+import { getI18N } from "../i18n/"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const {title,subtitle,resume} = Astro.props
+---
+
+<article>
+    <Swiper
+    spaceBetween={30}
+    loop={true}
+    autoplay={{
+      delay: 6500,
+      disableOnInteraction: true,
+    }}
+    pagination={{
+      type: 'progressbar',
+    }}
+    navigation={true}
+    modules={[Parallax, Autoplay, Pagination, Navigation]}
+    onAutoplayTimeLeft={onAutoplayTimeLeft}
+    className="h-screen rounded-2xl "
+    >
+
+    </Swiper>
+</article>
