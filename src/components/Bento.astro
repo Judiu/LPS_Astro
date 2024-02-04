@@ -37,14 +37,15 @@ const i18n = getI18N({ currentLocale });
                 </div>
                 <p
                     slot="content"
-                    class="max-w-xl text-white"
+                    class="max-w-xl text-white hidden sm:block"
                     set:html={i18n?.BENTO_1_ARTICLE}
                 />
             </BentoItem>
         </a>
         <!-- Item 2 -->
-        <BentoItem
-            class="col-span-10 md:col-span-4"
+        <a href="" class="col-span-10 md:col-span-4">
+            <BentoItem
+            class="h-full"
             title={i18n?.BENTO_2_TITLE}
             subtitle={i18n?.BENTO_2_SUBTITLE}
         >
@@ -56,13 +57,15 @@ const i18n = getI18N({ currentLocale });
             </div>
             <p
                 slot="content"
-                class="max-w-xl text-white"
+                class="max-w-xl text-white hidden sm:block"
                 set:html={i18n?.BENTO_2_ARTICLE}
             />
         </BentoItem>
+        </a>
         <!-- Item 3 -->
-        <BentoItem
-            class="col-span-10 md:col-span-4"
+        <a href="" class="col-span-10 md:col-span-4">
+            <BentoItem
+            class="h-full"
             title={i18n?.BENTO_3_TITLE}
             subtitle={i18n?.BENTO_3_SUBTITLE}
         >
@@ -74,13 +77,15 @@ const i18n = getI18N({ currentLocale });
             </div>
             <p
                 slot="content"
-                class="max-w-xl text-white"
+                class="max-w-xl text-white hidden sm:block"
                 set:html={i18n?.BENTO_3_ARTICLE}
             />
         </BentoItem>
+        </a>
         <!-- Item 4 -->
-        <BentoItem
-            class="col-span-10 md:col-span-6"
+        <a href="" class="col-span-10 md:col-span-6">
+            <BentoItem
+            class="h-full"
             title={i18n?.BENTO_4_TITLE}
             subtitle={i18n?.BENTO_4_SUBTITLE}
         >
@@ -92,13 +97,15 @@ const i18n = getI18N({ currentLocale });
             </div>
             <p
                 slot="content"
-                class="max-w-xl text-white"
+                class="max-w-xl text-white hidden sm:block"
                 set:html={i18n?.BENTO_4_ARTICLE}
             />
         </BentoItem>
+        </a>
         <!-- Item 5 -->
-        <BentoItem
-            class="col-span-10 md:col-span-6"
+        <a href="" class="col-span-10 md:col-span-6">
+            <BentoItem
+            class="h-full"
             title={i18n?.BENTO_5_TITLE}
             subtitle={i18n?.BENTO_5_SUBTITLE}
         >
@@ -110,13 +117,15 @@ const i18n = getI18N({ currentLocale });
             </div>
             <p
                 slot="content"
-                class="max-w-xl text-white"
+                class="max-w-xl text-white hidden sm:block"
                 set:html={i18n?.BENTO_5_ARTICLE}
             />
         </BentoItem>
+        </a>
         <!-- Item 6 -->
-        <BentoItem
-            class="col-span-10 md:col-span-4"
+        <a href="" class="col-span-10 md:col-span-4">
+            <BentoItem
+            class="h-full"
             title={i18n?.BENTO_6_TITLE}
             subtitle={i18n?.BENTO_6_SUBTITLE}
         >
@@ -128,9 +137,10 @@ const i18n = getI18N({ currentLocale });
             </div>
             <p
                 slot="content"
-                class="max-w-xl text-white"
+                class="max-w-xl text-white hidden sm:block"
                 set:html={i18n?.BENTO_6_ARTICLE}
             />
         </BentoItem>
+        </a>
     </section>
 </div>
