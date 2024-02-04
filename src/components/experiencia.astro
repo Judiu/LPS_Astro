@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+interface Props {
+    class ?: string;
+    title ?: string;
+    resume ?: string;
+    backgroundImage ?: string;
+    image ?: string;
+}
+
+const { title, resume, backgroundImage, image } = Astro.props;
+---
+
+<section
+    class={`
+        ${Astro.props.class}
+        block grid-cols-1 md:grid-cols-2
+        
+    
+
+    }`}>
+
+</section>
+
