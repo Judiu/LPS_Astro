@@ -1,13 +1,16 @@
 ---
 import LogoLPS from "./LogoLPS.astro"
+import './styles.css'
 ---
 
-<div class="w-full relative bg-white">
-    <img
-        class="absolute top-10 z-10 blur-none w-[1000px] left-0 right-0 m-auto"
-        alt="Logo LPS Ingenieria Estructural"
-        src="../Public/LogoLPS.svg"
-    />
+<div class="w-full h-96 sm:h-screen relative bg-white">    
+    <div class="absolute z-10 text-5xl text-LPSColor flex justify-center items-center w-full h-full">
+        <p class="text-center">EXPERTOS EN CALCULO ESTRUCTURAL</p>
+    </div>
+    <div class="absolute z-10 text-xl text-LPSColor flex items-center w-full h-full pt-[300px] grid-cols-2 justify-center">
+        <button class="custom-btn btn-6">Im a buttom</button>
+        <button class="custom-btn btn-6">Im a buttom</button>
+    </div>
     <video
         class="w-full h-screen object-cover object-top blur-lg z-0"
         src="../Public/video.mp4"
@@ -16,3 +19,4 @@ import LogoLPS from "./LogoLPS.astro"
         muted
     ></video>
 </div>
+
