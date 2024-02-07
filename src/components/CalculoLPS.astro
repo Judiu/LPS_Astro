@@ -1,88 +1,214 @@
 ---
 import Experiencia from "./experiencia.astro";
 import BentoItem from "./BentoItem.astro";
+import Pdf_render from "./Pdf_render.jsx";
 
 import { getI18N } from "../i18n";
 const { currentLocale } = Astro;
-const i18n = getI18N({currentLocale});
+const i18n = getI18N({ currentLocale });
 ---
 
 <section class="bg-white dark:bg-gray-900">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+    <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+    >
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">LPS Diseños estructurales</h2>
-            <p class="mb-4">En LPS contamos con mas de 35 años de experiencia en la realizacion de diseños estructurales</p>
-            <p>Los diseños estructurales son fundamentales en ingeniería y construcción para asegurar que las estructuras sean seguras y estables. Estos cálculos ayudan a determinar la resistencia, la estabilidad y la rigidez de las estructuras, lo que es crucial para prevenir el colapso estructur</p>
+            <h2
+                class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+            >
+                LPS Diseños estructurales
+            </h2>
+            <p class="mb-4">
+                En LPS contamos con mas de 35 años de experiencia en la
+                realizacion de diseños estructurales
+            </p>
+            <p>
+                Los diseños estructurales son fundamentales en ingeniería y
+                construcción para asegurar que las estructuras sean seguras y
+                estables. Estos cálculos ayudan a determinar la resistencia, la
+                estabilidad y la rigidez de las estructuras, lo que es crucial
+                para prevenir el colapso estructur
+            </p>
         </div>
         <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1">
-            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2">
+            <img
+                class="w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+                alt="office content 1"
+            />
+            <img
+                class="mt-4 w-full lg:mt-10 rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+                alt="office content 2"
+            />
         </div>
+    </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+    <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+    >
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2
+                class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+            >
+                LPS Diseños estructurales
+            </h2>
+            <p class="mb-4">
+                En LPS contamos con mas de 35 años de experiencia en la
+                realizacion de diseños estructurales
+            </p>
+            <p>
+                Los diseños estructurales son fundamentales en ingeniería y
+                construcción para asegurar que las estructuras sean seguras y
+                estables. Estos cálculos ayudan a determinar la resistencia, la
+                estabilidad y la rigidez de las estructuras, lo que es crucial
+                para prevenir el colapso estructur
+            </p>
+        </div>
+        <div id="adobe-dc-view" style="height: 360px; width: 500px;" class="absolute" ></div>
+        <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"
+        ></script>
+        <script type="text/javascript">
+            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+                var adobeDCView = new AdobeDC.View({
+                    clientId: "<7332458fdd9844c8864455373c695cd5>",
+                    divId: "adobe-dc-view",
+                });
+                adobeDCView.previewFile(
+                    {
+                        content: {
+                            location: {
+                                url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+                            },
+                        },
+                        metaData: { fileName: "Bodea Brochure.pdf" },
+                    },
+                    { embedMode: "SIZED_CONTAINER" },
+                );
+            });
+        </script>
     </div>
 </section>
 
 <section class="bg-white dark:bg-gray-700">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-1 lg:py-16 lg:px-6">
+    <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-1 lg:py-16 lg:px-6"
+    >
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+            <div
+                class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12"
+            >
                 <div class="flex items-center gap-12">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">LPS - Proyectos de diseño estructural</h2>
+                    <h2
+                        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+                    >
+                        LPS - Proyectos de diseño estructural
+                    </h2>
                 </div>
             </div>
-    
-            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+
+            <div
+                class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8"
+            >
                 <!-- image - start -->
-                <a href="#"
-                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                    <img src="./Estructural2.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-    
+                <a
+                    href="#"
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+                >
+                    <img
+                        src="./Estructural2.jpg"
+                        loading="lazy"
+                        alt="Photo by Minh Pham"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                    />
+
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+                    >
                     </div>
-    
-                    <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">DETALLES ESTRUCTURALES</span>
+
+                    <span
+                        class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                        >DETALLES ESTRUCTURALES</span
+                    >
                 </a>
                 <!-- image - end -->
-    
+
                 <!-- image - start -->
-                <a href="#"
-                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                    <img src="./Estructural1.jpg" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-    
+                <a
+                    href="#"
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+                >
+                    <img
+                        src="./Estructural1.jpg"
+                        loading="lazy"
+                        alt="Photo by Magicle"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                    />
+
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+                    >
                     </div>
-    
-                    <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">DETALLES ESTRUCTURALES</span>
+
+                    <span
+                        class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                        >DETALLES ESTRUCTURALES</span
+                    >
                 </a>
                 <!-- image - end -->
-    
+
                 <!-- image - start -->
-                <a href="#"
-                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                    <img src="./Estructural3.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-    
+                <a
+                    href="#"
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+                >
+                    <img
+                        src="./Estructural3.jpg"
+                        loading="lazy"
+                        alt="Photo by Martin Sanchez"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                    />
+
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+                    >
                     </div>
-    
-                    <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">DETALLES ESTRUCTURALES</span>
+
+                    <span
+                        class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                        >DETALLES ESTRUCTURALES</span
+                    >
                 </a>
                 <!-- image - end -->
-    
+
                 <!-- image - start -->
-                <a href="#"
-                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-    
+                <a
+                    href="#"
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600"
+                        loading="lazy"
+                        alt="Photo by Lorenzo Herrera"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                    />
+
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+                    >
                     </div>
-    
-                    <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
+
+                    <span
+                        class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                        >Retro</span
+                    >
                 </a>
                 <!-- image - end -->
             </div>
         </div>
     </div>
 </section>
+./Pdf_render.jsx
